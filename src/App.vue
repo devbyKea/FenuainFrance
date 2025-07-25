@@ -21,6 +21,11 @@ import Footer from './components/Footer.vue'
 </script>
 
 <style scoped>
+
+#socials {
+  scroll-margin-top: 40rem; /* ajuste selon la hauteur de ton header */
+}
+
 main {
   padding: 2rem;
 }
@@ -42,6 +47,7 @@ main {
   margin: 0;
   padding: 0;
 }
+
 
 
 </style>

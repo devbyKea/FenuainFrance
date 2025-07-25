@@ -5,7 +5,7 @@
         <h1><span>Ia ora na ☀️</span><br />Bienvenue à Bordeaux</h1>
         <p>
           Tu viens du fenua ? Ce site est là pour t'aider à t'installer,
-          trouver les bonnes infos, et créer du lien.
+          trouver les bonnes infos et t'accompagner.
         </p>
         <a href="#aides" class="hero-button">Découvrir les aides</a>
       </div>
@@ -236,7 +236,19 @@ onMounted(() => {
     left: 125%;
   }
 }
+.hero-wave {
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  z-index: -1;
+  transition: d 1s ease-in-out;
+}
 
+.wave-animated {
+  transition: d 1.5s ease-in-out;
+}
 .wave-transition {
   width: 100%;
   line-height: 0;

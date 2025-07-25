@@ -176,7 +176,7 @@ function toggleDetails(index: number) {
   z-index: 0;
   position: relative;
   margin-bottom: 0 !important;
-  padding-bottom: 0 !important;
+  
 }
 
 

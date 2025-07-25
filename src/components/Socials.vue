@@ -2,19 +2,20 @@
 
   <!-- Vague de transition (collée à la section précédente) -->
   <div class="wave-transition">
+    <!-- Vague de fond intégrée directement -->
     <svg class="hero-wave" viewBox="0 0 1440 220" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
-      <defs>
-<linearGradient id="heroGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-  <stop offset="0%" stop-color="#fffaf4" />
-  <stop offset="100%" stop-color="#f7b500" />
-</linearGradient>
-      </defs>
-      <path
-        :d="wavePath"
-        fill="url(#heroGradient)"
-        class="wave-animated"
-      />
-    </svg>
+  <defs>
+    <linearGradient id="heroGradient" x1="0%" y1="50%" x2="100%" y2="50%">
+      <stop offset="0%" stop-color="#f7b500" />
+      <stop offset="100%" stop-color="#fffaf4" />
+    </linearGradient>
+  </defs>
+  <path
+    :d="wavePath"
+    fill="url(#heroGradient)"
+    class="wave-animated"
+  />
+</svg>
   </div>
 
   <section class="socials">
@@ -62,7 +63,7 @@ const socialLinks: SocialLink[] = [
   }
 ]
 // Vague animée
-const wavePath = ref('M0,50 C360,280 1080,20 1440,50 L1440,100 L0,100 Z')
+const wavePath = ref('M0,160 C360,280 1080,0 1440,160 L1440,320 L0,320 Z')
 
 const frames = [
   "M0,320L0,160C180,120,360,200,540,190C720,180,900,100,1080,130C1260,160,1350,200,1440,160L1440,320L0,320Z",
@@ -86,9 +87,7 @@ const frames = [
   "M0,320L0,160C180,120,360,180,540,190C720,200,900,140,1080,130C1260,120,1350,170,1440,160L1440,320L0,320Z",
   "M0,320L0,160C160,150,320,190,480,180C640,170,800,130,960,130C1120,130,1280,170,1440,160L1440,320L0,320Z",
   "M0,320L0,160C180,120,360,200,540,190C720,180,900,100,1080,130C1260,160,1350,200,1440,160L1440,320L0,320Z",
-  "M0,320L0,160C160,140,320,180,480,200C640,220,800,140,960,130C1120,120,1280,180,1440,160L1440,320L0,320Z",
-  "M0,320L0,160C160,140,320,180,480,200C640,220,800,140,960,130C1120,120,1280,180,1440,160L1440,320L0,320Z",
-  "M0,320L0,160C180,120,360,200,540,190C720,180,900,100,1080,130C1260,160,1350,200,1440,160L1440,320L0,320Z"
+  "M0,320L0,160C160,140,320,180,480,200C640,220,800,140,960,130C1120,120,1280,180,1440,160L1440,320L0,320Z"
 ]
 
 
@@ -156,28 +155,48 @@ onMounted(() => {
   opacity: 0.8;
 }
 
+.hero-wave {
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  z-index: -1;
+  transition: d 1s ease-in-out;
+}
+
+.wave-animated {
+  transition: d 1.5s ease-in-out;
+}
 .wave-transition {
-  margin-top: -22rem; /* colle parfaitement */
-  margin-bottom: 0rem;
+  width: 100%;
   line-height: 0;
-  height: auto;
-  overflow: hidden;
   position: relative;
+  margin-top: -1px; /* évite ligne blanche entre les blocs */
   z-index: 1;
 }
 
 
-
-.hero-wave {
+.wave-transition svg {
   display: block;
   width: 100%;
-  height: 100px;
-  margin: 0;
+  height: auto;
 }
 
+.wave-path {
+  animation: waveAnim 4s linear infinite;
+}
 
-.wave-animated {
-  transition: d 1s ease-in-out;
+@keyframes waveAnim {
+  0% {
+    d: path("M 0,600 L 0,225 C 79.1,194.7 158.2,164.4 269,184 C 379.7,203.5 522.0,273.0 621,291 C 719.9,308.9 775.3,275.2 859,257 C 942.6,238.7 1054.4,235.7 1156,233 C 1257.5,230.2 1348.7,227.6 1440,225 L 1440,600 L 0,600 Z");
+  }
+  50% {
+    d: path("M 0,600 L 0,225 C 105.2,206.7 210.4,188.4 315,194 C 419.5,199.5 523.2,229.0 619,230 C 714.7,230.9 802.3,203.2 879,191 C 955.6,178.7 1021.3,181.7 1113,190 C 1204.6,198.2 1322.3,211.6 1440,225 L 1440,600 L 0,600 Z");
+  }
+  100% {
+    d: path("M 0,600 L 0,225 C 79.1,194.7 158.2,164.4 269,184 C 379.7,203.5 522.0,273.0 621,291 C 719.9,308.9 775.3,275.2 859,257 C 942.6,238.7 1054.4,235.7 1156,233 C 1257.5,230.2 1348.7,227.6 1440,225 L 1440,600 L 0,600 Z");
+  }
 }
 
 @media screen and (max-width: 768px) {
