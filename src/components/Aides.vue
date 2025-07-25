@@ -1,7 +1,7 @@
 <template>
   <section class="aides">
     <h2 class="section-title">
-      Aides et Démarches Essentielles
+      📝 Aides et Démarches Essentielles
     </h2>
 
     <div class="card-container">

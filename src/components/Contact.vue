@@ -50,13 +50,41 @@
 
 <script setup lang="ts">
 import { ref, onMounted } from 'vue'
+import emailjs from 'emailjs-com'
 
+// Références des champs du formulaire
 const name = ref('')
 const email = ref('')
 const objet = ref('')
 const message = ref('')
+
+// Fonction d'envoi avec EmailJS
 const sendEmail = () => {
-  console.log('Formulaire prêt à être envoyé avec EmailJS')
+  const templateParams = {
+    from_name: name.value,
+    reply_to: email.value,
+    subject: objet.value,
+    message: message.value,
+  }
+
+  emailjs
+    .send(
+      'service_6tungvu',      // 👉 Remplace par ton SERVICE ID EmailJS
+      'template_n1sorph',     // 👉 Remplace par ton TEMPLATE ID EmailJS
+      templateParams,
+      'sZE3Zoo7-7cV7rh-i'       // 👉 Remplace par ta PUBLIC KEY EmailJS
+    )
+    .then(() => {
+      alert('Message envoyé avec succès !')
+      name.value = ''
+      email.value = ''
+      objet.value = ''
+      message.value = ''
+    })
+    .catch((error) => {
+      console.error('Erreur EmailJS:', error)
+      alert("Une erreur s'est produite. Essaie à nouveau.")
+    })
 }
 
 // Vague animée
@@ -94,11 +122,17 @@ const frames = [
 let i = 0
 
 onMounted(() => {
-  setInterval(() => {
+  const animate = () => {
     i = (i + 1) % frames.length
     wavePath.value = frames[i]
-  }, 1200) // toutes les 1200ms
+    setTimeout(() => {
+      requestAnimationFrame(animate)
+    }, 1200)
+  }
+
+  requestAnimationFrame(animate)
 })
+
 </script>
 
 

@@ -48,7 +48,7 @@ const socialLinks: SocialLink[] = [
   {
     name: 'Page Facebook',
     url: 'https://www.facebook.com/profile.php?id=61578310214884',
-    icon: '/public/logo.png'
+    icon: '/icons/logo.png'
   },
   {
     name: 'Groupe Facebook',
@@ -96,11 +96,17 @@ const frames = [
 let i = 0
 
 onMounted(() => {
-  setInterval(() => {
+  const animate = () => {
     i = (i + 1) % frames.length
     wavePath.value = frames[i]
-  }, 1200) // toutes les 1200ms
+    setTimeout(() => {
+      requestAnimationFrame(animate)
+    }, 1200)
+  }
+
+  requestAnimationFrame(animate)
 })
+
 </script>
 
 <style scoped>

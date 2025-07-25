@@ -66,11 +66,17 @@ const frames = [
 let i = 0
 
 onMounted(() => {
-  setInterval(() => {
+  const animate = () => {
     i = (i + 1) % frames.length
     wavePath.value = frames[i]
-  }, 1200) // toutes les 1200ms
+    setTimeout(() => {
+      requestAnimationFrame(animate)
+    }, 1200)
+  }
+
+  requestAnimationFrame(animate)
 })
+
 </script>
 
 

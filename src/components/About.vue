@@ -82,11 +82,17 @@ const frames = [
 let i = 0
 
 onMounted(() => {
-  setInterval(() => {
+  const animate = () => {
     i = (i + 1) % frames.length
     wavePath.value = frames[i]
-  }, 1200) // toutes les 1200ms
+    setTimeout(() => {
+      requestAnimationFrame(animate)
+    }, 1200)
+  }
+
+  requestAnimationFrame(animate)
 })
+
 </script>
 
 <style scoped>
@@ -143,11 +149,9 @@ onMounted(() => {
   margin-bottom: 0.8rem;
   text-align: center;
   font-family: 'Inter', sans-serif;
-  background: rgba(255, 255, 255, 0.4);
-  backdrop-filter: blur(6px);
   padding: 0.4rem 1rem;
   border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  
 }
 
 .portfolio-link {
@@ -190,6 +194,67 @@ onMounted(() => {
 
 .wave-animated {
   transition: d 1s ease-in-out;
+}
+
+@media (max-width: 768px) and (min-width: 510px) {
+  .about-content {
+    max-width: 80%;
+    margin: 0 auto;
+    padding: 1.5rem;
+    background: rgba(255, 255, 255, 0.75); /* arrière-plan semi-opaque pour lisibilité */
+    border-radius: 12px;
+  }
+
+  .about-text {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #3e5f47; /* un peu plus foncé si besoin */
+  }
+}
+
+@media (max-width: 510px) {
+
+    body,
+  html {
+    overflow-x: hidden;
+  }
+  .about {
+    
+    padding-left: 1rem;
+    padding-right: 1rem;
+    background-attachment: scroll;
+  }
+
+  .about-content {
+    padding: 1.2rem;
+    max-width: 100%;
+  }
+
+  .about-title {
+    font-size: 1.6rem;
+    line-height: 1.4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4rem;
+    padding-top: 0.5rem;
+  }
+
+  .about-text {
+    font-size: 1rem;
+    text-align: left;
+  }
+
+  .portfolio-link {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .portfolio-link img {
+    width: 90%;
+    height: auto;
+    max-width: 280px;
+  }
 }
 
 </style>
