@@ -151,12 +151,13 @@ function toggleDetails(index: number) {
   color: #3e5f47; /* même vert foncé que "la ora na" */
   display: flex;
   align-items: center;
+  justify-items: center;
   gap: 0.6rem;
   margin-bottom: 2rem;
-  background: linear-gradient(145deg, #eaf8f0, #ffffff);
+  
   padding: 0.8rem 1.2rem;
   border-radius: 16px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+  
   width: fit-content;
 }
 
