@@ -123,18 +123,31 @@ onMounted(() => {
 }
 
 .hero-card {
-  background: rgba(255, 255, 255, 0.15);
+    background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0.35),
+    rgba(255, 255, 255, 0.25)
+  );
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  border-radius: 16px;
+
+  border-radius: 20px;
   padding: 2rem;
-  max-width: 500px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  max-width: 90vw;
+
+  /* Néomorphisme soft */
+  box-shadow:
+    10px 10px 30px rgba(0, 0, 0, 0.1),   /* ombre projetée */
+    -10px -10px 30px rgba(255, 255, 255, 0.3); /* lumière douce */
+
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
   gap: 1.5rem;
-  z-index: 2;
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  transition: all 0.3s ease;
+
 }
 
 .hero-card h1 {
@@ -151,7 +164,7 @@ onMounted(() => {
 
 .hero-card p {
   font-size: 1.1rem;
-  color: #446655;
+  color: #3e5f47;
   margin: 0;
 }
 
@@ -253,52 +266,38 @@ onMounted(() => {
 
 
 
-/* Responsive Design */
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
   .hero {
-    padding-top: 120px;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    align-items: center;
-    justify-content: flex-start;
-    background-position: center top;
+    background-attachment: scroll !important;
+    background-position: center top !important;
+    background-size: cover !important;
   }
 
-  .hero-inner {
-    padding: 0 1rem;
-  }
-
-  .hero-card {
+  .hero .glass {
+    max-width: 70%;
     margin: 0 auto;
-    width: 100%;
-    max-width: 100%;
-    box-sizing: border-box;
-    padding: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .hero-card h1 {
+    font-size: 1.8rem;
+    line-height: 2.2rem;
   }
 
-  .hero-card h1 {
-    font-size: 2.2rem;
-    text-align: center;
+  .hero-card h2 {
+    font-size: 1.4rem;
+    line-height: 2rem;
   }
 
   .hero-card p {
-    text-align: center;
-    font-size: 1rem;
+    font-size: 0.95rem;
   }
 
   .hero-button {
-    margin: 0 auto;
-    align-self: center;
+    font-size: 1rem;
+    padding: 0.6rem 1.2rem;
   }
 }
 
-@media (max-width: 480px) {
-  .hero-card h1 {
-    font-size: 1.8rem;
-  }
-  
-  .hero-card {
-    padding: 1rem;
-  }
-}
 </style>

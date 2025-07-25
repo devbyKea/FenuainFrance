@@ -333,5 +333,14 @@ function toggleDetails(index: number) {
   filter: grayscale(0);
 }
 
+@media screen and (max-width: 768px) {
+  .aides {
+    background-attachment: scroll !important;
+    background-position: center top !important;
+    background-size: cover !important;
+  }
+
+}
+
 
 </style>

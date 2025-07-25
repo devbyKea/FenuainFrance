@@ -174,4 +174,13 @@ onMounted(() => {
 .wave-animated {
   transition: d 1s ease-in-out;
 }
+
+@media screen and (max-width: 768px) {
+  .socials {
+    background-attachment: scroll !important;
+    background-position: center top !important;
+    background-size: cover !important;
+  }
+
+}
 </style>
