@@ -66,16 +66,21 @@ const frames = [
 let i = 0
 
 onMounted(() => {
-  const animate = () => {
-    i = (i + 1) % frames.length
-    wavePath.value = frames[i]
-    setTimeout(() => {
-      requestAnimationFrame(animate)
-    }, 1200)
-  }
+  const isMobile = window.innerWidth < 768
 
-  requestAnimationFrame(animate)
+  if (!isMobile) {
+    const animate = () => {
+      i = (i + 1) % frames.length
+      wavePath.value = frames[i]
+      setTimeout(() => {
+        requestAnimationFrame(animate)
+      }, 1200)
+    }
+
+    requestAnimationFrame(animate)
+  }
 })
+
 
 </script>
 
