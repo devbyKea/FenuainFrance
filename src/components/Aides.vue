@@ -1,7 +1,7 @@
 <template>
   <section class="aides">
     <h2 class="section-title">
-      📝 Aides et Démarches Essentielles
+      Aides et Démarches Essentielles
     </h2>
 
     <div class="card-container">
@@ -341,7 +341,13 @@ function toggleDetails(index: number) {
     background-size: cover !important;
   }
 
+  .section-title {
+    justify-content: center;
+    font-size: 1.5rem;
+  }
+
 }
+
 
 
 </style>

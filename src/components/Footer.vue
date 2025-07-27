@@ -32,4 +32,10 @@
   margin: 0 auto;
   padding: 0 1rem;
 }
+
+@media (max-width: 600px) {
+  .footer {
+    font-size: 0.8rem;
+  }
+}
 </style>

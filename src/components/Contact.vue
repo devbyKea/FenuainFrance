@@ -19,7 +19,7 @@
 
   <section class="contact">
     <div class="glass-form">
-      <h2 class="contact-title">📩 Contacte-moi</h2>
+      <h2 class="contact-title">Contacte-moi</h2>
       <p class="contact-intro">
         Une question, une remarque ou une envie de collaborer ?
         N'hésite pas à m'écrire, je réponds toujours avec plaisir. 😊

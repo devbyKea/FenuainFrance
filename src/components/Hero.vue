@@ -136,7 +136,7 @@ onMounted(() => {
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
 
-  border-radius: 20px;
+  border-radius: 100px;
   padding: 2rem;
   max-width: 90vw;
 
@@ -152,10 +152,12 @@ onMounted(() => {
   text-align: center;
   gap: 1.5rem;
   transition: all 0.3s ease;
+  margin-top: -10rem;
 
 }
 
 .hero-card h1 {
+  font-family: Arial, Helvetica, sans-serif;
   font-size: 3rem;
   font-weight: 700;
   color: #f7b500;

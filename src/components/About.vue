@@ -27,10 +27,10 @@
         Les débuts n’ont pas été faciles : nouveau pays, pas de repères, peu de contacts, des démarches administratives complexes... J’ai souvent galéré à trouver un logement, à m’orienter ou simplement à me sentir chez moi.
       </p>
       <p class="about-text">
-        Aujourd’hui, je veux transformer cette expérience en force 💪 et aider les personnes du fenua qui arrivent à Bordeaux à s’installer plus sereinement : infos pratiques, bons plans, liens utiles et entraide 🌺
+        Aujourd’hui, je veux transformer cette expérience en force et aider les personnes du fenua qui arrivent à Bordeaux à s’installer plus sereinement : infos pratiques, bons plans, liens utiles et entraide.
       </p>
       <p class="about-text">
-        Passionné par les sports de glisse 🛹🏄‍♂️ et la musique 🎸, je développe ce projet avec le cœur, en espérant qu’il puisse vraiment servir à d'autres 🤙
+        Passionné par les sports de glisse et la musique, je développe ce projet avec le cœur, en espérant qu’il puisse vraiment servir à d'autres
       </p>
       <div class="portfolio-link">
         <h3 class="portfolio-title">Mon Portfolio :</h3>
@@ -246,7 +246,7 @@ onMounted(() => {
 
   .portfolio-link img {
     width: 100%;
-    max-width: 250px;
+    max-width: 1000px;
   }
 }
 
