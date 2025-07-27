@@ -104,22 +104,6 @@ onMounted(() => {
   flex-wrap: wrap;
 }
 
-.hero-wave {
-  position: absolute;
-  bottom: -1px;
-  left: 0;
-  width: 100%;
-  height: 100px;
-  z-index: -1;
-  transition: d 1s ease-in-out;
-}
-
-.wave-animated {
-  transition: d 1.5s ease-in-out;
-}
-
-
-
 .hero-inner {
   max-width: 1200px;
   width: 100%;

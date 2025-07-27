@@ -3,7 +3,7 @@
   <!-- Vague de transition (collée à la section précédente) -->
   <div class="wave-transition">
     <!-- Vague de fond intégrée directement -->
-    <svg class="hero-wave" viewBox="0 0 1440 220" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+    <svg class="hero-wave" viewBox="0 0 1440 180" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
   <defs>
     <linearGradient id="heroGradient" x1="0%" y1="50%" x2="100%" y2="50%">
       <stop offset="0%" stop-color="#f7b500" />

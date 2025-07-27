@@ -179,7 +179,6 @@ function toggleDetails(index: number) {
   
 }
 
-
 .card-container {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
@@ -333,6 +332,8 @@ function toggleDetails(index: number) {
   transform: scale(1.1);
   filter: grayscale(0);
 }
+
+
 
 @media screen and (max-width: 768px) {
   .aides {
