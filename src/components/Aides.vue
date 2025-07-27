@@ -167,15 +167,15 @@ function toggleDetails(index: number) {
   background-attachment: scroll; /* ou 'local' selon ton besoin */
   min-height: 100vh;
   padding: 2rem;
-  padding-top: 160px;
-  padding-bottom: 10rem;
+  padding-top: 10rem;
+  padding-bottom: 20rem;
   font-family: 'Inter', sans-serif;
   display: flex;
   flex-direction: column;
   align-items: center;
-  z-index: 0;
+  z-index: 1;
   position: relative;
-  margin-bottom: 0 !important;
+  overflow: hidden;
   
 }
 
