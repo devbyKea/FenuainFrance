@@ -2,7 +2,7 @@
   <section class="hero">
     <div class="hero-inner">
       <div class="hero-card">
-        <h1><span>Ia ora na ☀️</span><br />Bienvenue à Bordeaux</h1>
+        <h1><span>Ia ora na ☀️</span><br />Bienvenue en France</h1>
         <p>
           Tu viens du fenua ? Ce site est là pour t'aider à t'installer,
           trouver les bonnes infos et t'accompagner.
