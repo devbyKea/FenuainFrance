@@ -1,7 +1,7 @@
 <template>
   <footer class="footer">
     <div class="footer-content">
-      <p>🌺 Tous droits réservés — <strong>Fenua in France</strong> © 2025 🌺</p>
+      <p>Tous droits réservés — <strong>Fenua in France</strong> © 2025 </p>
     </div>
   </footer>
 </template>
