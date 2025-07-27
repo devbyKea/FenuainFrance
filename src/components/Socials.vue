@@ -118,7 +118,7 @@ onMounted(() => {
   text-align: center;
   padding: 4rem 2rem;
   background: url('/public/bg_socials.jpg') no-repeat center center;
-  min-height: 50vh;
+  min-height: 60vh;
   background-size: cover;
   font-family: 'Inter', sans-serif;
 }

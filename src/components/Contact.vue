@@ -155,7 +155,7 @@ onMounted(() => {
 
 .glass-form {
   margin-top: 8rem;
-  margin-bottom: 20rem;
+  margin-bottom: 12rem;
   background: rgba(255, 255, 255, 0.25);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
